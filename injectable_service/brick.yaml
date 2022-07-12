@@ -1,0 +1,20 @@
+name: injectable_service
+description: A brick to create an injectable service, with tests and custom methods, it's an extension on the 'service' brick.
+version: 0.1.0
+repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/service
+
+vars:
+  service_name:
+    default: service
+    type: string
+    description: The name of the service
+    prompt: What is the service name?
+  injection_type:
+    type: enum
+    default: lazy-singleton
+    description: The service injection type
+    prompt: What is the injection type?
+    values:
+      - singleton
+      - lazy-singleton
+      - factory
