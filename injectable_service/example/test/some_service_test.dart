@@ -1,28 +1,46 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
-class MockSomeDependancy extends Mock implements SomeDependancy {}
-class MockAnotherDependancy extends Mock implements AnotherDependancy {}
+class MockSomeDependency extends Mock implements SomeDependency {}
+class MockAnotherDependency extends Mock implements AnotherDependency {}
 
 void main() {
-  MockSomeDependancy someDependancy();
-  MockAnotherDependancy anotherDependancy();
+  late MockSomeDependency someDependency;
+  late MockAnotherDependency anotherDependency;
   
   setUp(() {
-    someDependancy = MockSomeDependancy();
-    anotherDependancy = MockAnotherDependancy();
+    someDependency = MockSomeDependency();
+    anotherDependency = MockAnotherDependency();
+    
   });
 
-  test(
-    'Should return/do smth when smth',
-    () async {
-      // arrange
-  
-      // act
-   
-      // assert
+   group('SomeService', () {
+    test('can be instantiated', () {
+      expect(const SomeService(someDependency,anotherDependency,), isNotNull);
+    });
+    
+    group('doSomething', () {
+      test('executes success flow', () async {
+        final value = someService.doSomething();
+        //expect(value, equals(smth));
+      });
 
-    },
-  );
+      test('executes failure flow', () async {
+        final value = someService.doSomething();
+        //expect(value, equals(smth));
+      });
+    });
+    
+    group('saySomething', () {
+      test('executes success flow', () async {
+        final value = someService.saySomething();
+        //expect(value, equals(smth));
+      });
 
-}
+      test('executes failure flow', () async {
+        final value = someService.saySomething();
+        //expect(value, equals(smth));
+      });
+    });
+
+  });
