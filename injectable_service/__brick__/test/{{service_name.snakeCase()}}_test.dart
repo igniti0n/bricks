@@ -4,23 +4,28 @@ import 'package:mockito/mockito.dart';
 class Mock{{name.pascalCase()}} extends Mock implements {{name.pascalCase()}} {}{{/dependencies}}
 
 void main() {
-  {{#dependencies}}Mock{{name.pascalCase()}} {{name.camelCase()}}();
+  {{#dependencies}}late Mock{{name.pascalCase()}} {{name.camelCase()}};
   {{/dependencies}}
   setUp(() {
     {{#dependencies}}{{name.camelCase()}} = Mock{{name.pascalCase()}}();
     {{/dependencies}}
   });
 
-  test(
-    'Should return/do smth when smth',
-    () async {
-      // arrange
-  
-      // act
-   
-      // assert
+   group('{{service_name.pascalCase()}}', () {
+    test('can be instantiated', () {
+      expect(const {{service_name.pascalCase()}}({{#dependencies}}{{name.camelCase()}},{{/dependencies}}), isNotNull);
+    });
+    {{#methods}}
+    group('{{name}}', () {
+      test('executes success flow', () async {
+        final value = {{service_name.camelCase()}}.{{name}}();
+        //expect(value, equals(smth));
+      });
 
-    },
-  );
-
-}
+      test('executes failure flow', () async {
+        final value = {{service_name.camelCase()}}.{{name}}();
+        //expect(value, equals(smth));
+      });
+    });
+    {{/methods}}
+  });

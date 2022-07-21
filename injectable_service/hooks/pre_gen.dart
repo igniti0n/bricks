@@ -22,7 +22,6 @@ void run(HookContext context) {
     logger.alert(lightYellow.wrap('enter "e" to exit adding dependencies'));
     logger.alert('Format: dependencyName');
     final dependencies = <Map<String, dynamic>>[];
-
     while (true) {
       final dependency =
           logger.prompt(':').replaceAll(RegExp('\\s+'), ' ').trim();
@@ -34,6 +33,9 @@ void run(HookContext context) {
             'That was not a valid format, no spaces just the name -> dependencyName');
         continue;
       }
+      if (dependency == '' || dependency == '\n' || dependency.length == 1) {
+        continue;
+      }
       dependencies.add({'name': dependency});
     }
     context.vars = {
@@ -41,18 +43,15 @@ void run(HookContext context) {
       'dependencies': dependencies,
     };
   }
-
   if (!logger.confirm(
     '? Do you want to add methods to your service?',
     defaultValue: true,
   )) {
     return;
   }
-
   logger.alert(lightYellow.wrap('enter "e" to exit adding methods'));
   logger.alert('Format: returnType methodName e.g, String myMethod:');
   final methods = <Map<String, dynamic>>[];
-
   while (true) {
     final method = logger.prompt(':').replaceAll(RegExp('\\s+'), ' ').trim();
     if (method.toLowerCase() == 'e') {

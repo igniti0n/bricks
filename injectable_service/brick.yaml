@@ -1,7 +1,7 @@
 name: injectable_service
 description: A brick to create an injectable service, with tests and custom methods, it's an extension on the 'service' brick.
 version: 0.1.0
-repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/service
+repository: https://github.com/igniti0n/bricks/tree/main/injectable_service
 
 vars:
   service_name:
