@@ -1,5 +1,5 @@
 name: injectable_service
-description: A brick to create an injectable service, with tests and custom methods, it's an extension on the 'service' brick.
+description: A brick to create your injectable service, interface and tests with defined dependencies and methods.
 version: 0.1.0
 repository: https://github.com/igniti0n/bricks/tree/main/injectable_service
 

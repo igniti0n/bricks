@@ -1,33 +1,25 @@
-
-import 'package:injectable/injectable.dart';
+mport 'package:injectable/injectable.dart';
 
 part 'isome_service.dart';
 
-
 @Singleton(as: ISomeService)
-
 class SomeService extends ISomeService {
-  SomeDependancy someDependancy;
-  AnotherDependancy anotherDependancy;
-  
-  SomeService(this.someDependancy,this.anotherDependancy,);
+  SomeService(
+    this.someDependency,
+    this.anotherDependency,
+  );
+  SomeDependency someDependency;
+  AnotherDependency anotherDependency;
 
   @override
-  FutureOr<void> smth() async {
+  Future<void> doSomething() async {
     //TODO: Add Logic
     return Future.value();
   }
 
   @override
-  FutureOr<void> another() async {
+  Future<String> saySomething() async {
     //TODO: Add Logic
     return Future.value();
   }
-
-  @override
-  FutureOr<void> smth() async {
-    //TODO: Add Logic
-    return Future.value();
-  }
-
 }

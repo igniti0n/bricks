@@ -5,8 +5,8 @@ void run(HookContext context) {
 
   final injectionType = context.vars['injection_type'].toString().toLowerCase();
   final isFactory = injectionType == 'factory';
-  final isSingleton = injectionType == 'lazy-singleton';
-  final isLazySingleton = injectionType == 'singleton';
+  final isSingleton = injectionType == 'singleton';
+  final isLazySingleton = injectionType == 'lazy-singleton';
 
   context.vars = {
     ...context.vars,

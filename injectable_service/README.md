@@ -1,6 +1,6 @@
 # Injecable Service
 
-A brick to create your injectable service, interface and tests with your defined dependencies and methods.
+A brick to create your injectable service, interface and tests with your dependencies and methods.
 
 Based on the service brick: https://brickhub.dev/bricks/service/0.0.4
 
