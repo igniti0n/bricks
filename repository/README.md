@@ -1,4 +1,4 @@
-# Injecable Service
+# Repository
 
 A brick to create a repository with custom methods, dependencies and tests.
 
