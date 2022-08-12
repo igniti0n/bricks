@@ -5,7 +5,7 @@ A brick to create a repository with custom methods, dependencies and tests.
 ## How to use 🚀
 
 ```
-mason make repository --name user
+mason make clean_repository --name user
 ```
 
 ## Variables ✨
