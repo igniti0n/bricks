@@ -1,0 +1,11 @@
+name: clean_repository
+description: A brick to creates a repository with methods, dependencies and tests for it.
+version: 0.1.0
+repository: https://github.com/igniti0n/bricks/tree/main/repository
+
+vars:
+  name:
+    type: string
+    description: Your name
+    default: user
+    prompt: What is the repository name?
