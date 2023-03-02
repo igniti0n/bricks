@@ -5,14 +5,14 @@ A brick to create a service with custom methods, dependencies and tests.
 ## How to use 🚀
 
 ```
-mason make clean_service --name user
+mason make clean_service --name DatabaseService
 ```
 
 ## Variables ✨
 
 | Variable         | Description                | Default                   | Type     |
 | ---------------- | -------------------------- | ------------------------- | -------- |
-| `name`           |    Name of the service   |           user            | `string` |
+| `name`           |    Name of the service   |           DatabaseService            | `string` |
 
 ## Outputs 📦
 
