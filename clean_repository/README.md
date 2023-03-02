@@ -12,7 +12,7 @@ mason make clean_repository --name user
 
 | Variable         | Description                | Default                   | Type     |
 | ---------------- | -------------------------- | ------------------------- | -------- |
-| `user`           |    Name of therepository   |           user            | `string` |
+| `name`           |    Name of therepository   |           user            | `string` |
 
 ## Outputs 📦
 
@@ -20,7 +20,8 @@ mason make clean_repository --name user
 project
  ┣ 📂lib
  ┃  ┗ 📂data
- ┃     ┗ 📜user_repository.dart
+ ┃     ┗ 📂repositories
+ ┃       ┗ 📜user_repository.dart
  ┣ 📂test
  ┃  ┗ 📂data
  ┃     ┗ 📜user_repository_test.dart

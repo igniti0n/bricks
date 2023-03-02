@@ -1,4 +1,4 @@
-name: provider_service
+name: clean_service
 description: A new brick created with the Mason CLI.
 
 # The following defines the brick repository url.
