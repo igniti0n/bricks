@@ -8,3 +8,5 @@ bricks:
     path: repository
   clean_repository:
     path: clean_repository
+  provider_service:
+    path: provider_service
