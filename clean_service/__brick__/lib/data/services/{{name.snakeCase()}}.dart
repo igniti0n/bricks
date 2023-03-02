@@ -7,7 +7,7 @@ final {{name.camelCase()}}Provider = Provider<{{name.pascalCase()}}>((ref) {
 });
 
 abstract class {{name.pascalCase()}} { {{#methods}}
-  Future<{{type.pascalCase()}}> {{methodName}}();
+  Future<{{type}}> {{methodName}}();
   {{/methods}}
 }
 
