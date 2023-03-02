@@ -6,3 +6,5 @@ bricks:
     path: feature
   repository:
     path: repository
+  clean_repository:
+    path: clean_repository

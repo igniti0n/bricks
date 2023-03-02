@@ -1,0 +1,3 @@
+
+analyzer:
+  exclude: [clean_repository/**, injectable_service/**]

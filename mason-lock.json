@@ -1,1 +1,1 @@
-{"bricks":{"feature":{"path":"feature"},"injectable_service":"0.1.0","repository":{"path":"repository"}}}
+{"bricks":{"feature":{"path":"feature"},"injectable_service":"0.1.0","repository":{"path":"repository"},"clean_repository":{"path":"clean_repository"}}}
