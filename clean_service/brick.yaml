@@ -1,5 +1,5 @@
 name: clean_service
-description: A new brick created with the Mason CLI.
+description: A brick to creates a service with methods, dependencies and tests for it.
 
 # The following defines the brick repository url.
 # Uncomment and update the following line before publishing the brick.
