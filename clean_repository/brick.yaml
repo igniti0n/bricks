@@ -1,6 +1,6 @@
 name: clean_repository
 description: A brick to creates a repository with methods, dependencies and tests for it.
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/igniti0n/bricks/tree/main/clean_repository
 
 vars:
