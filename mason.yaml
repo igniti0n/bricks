@@ -10,3 +10,11 @@ bricks:
     path: clean_repository
   clean_service:
     path: clean_service
+  provider:
+    path: provider
+  state_provider:
+    path: state_provider
+  notifier:
+    path: notifier
+  page:
+    path: page

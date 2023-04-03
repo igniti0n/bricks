@@ -1,1 +1,1 @@
-{"bricks":{"feature":{"path":"feature"},"injectable_service":"0.1.0","repository":{"path":"repository"},"clean_repository":{"path":"clean_repository"},"clean_service":{"path":"clean_service"}}}
+{"bricks":{"feature":{"path":"feature"},"injectable_service":"0.1.0","repository":{"path":"repository"},"clean_repository":{"path":"clean_repository"},"clean_service":{"path":"clean_service"},"provider":{"path":"provider"},"state_provider":{"path":"state_provider"},"notifier":{"path":"notifier"},"page":{"path":"page"}}}

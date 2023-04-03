@@ -1,3 +1,3 @@
 
 analyzer:
-  exclude: [clean_repository/**, injectable_service/**, clean_service/**]
+  exclude: [clean_repository/**, injectable_service/**, clean_service/**,  provider/**,riverpod_providers/**, request_provider/**, page/**,state_provider/**,notifier/**]

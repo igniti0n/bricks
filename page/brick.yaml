@@ -1,0 +1,27 @@
+name: page
+description: A brick to create a new page in the Flutter app.
+version: 1.2.0
+
+environment:
+  mason: ">=0.1.0-dev.34 <0.1.0"
+
+# Variables specify dynamic values that your brick depends on.
+# Zero or more variables can be specified for a given brick.
+# Each variable has:
+#  * a type (string, number, boolean, enum, or array)
+#  * an optional short description
+#  * an optional default value
+#  * an optional list of default values (array only)
+#  * an optional prompt phrase used when asking for the variable
+#  * a list of values (enums only)
+vars:
+  path:
+    type: string
+    description: Directory path to page
+    default: src/ui/pages
+    prompt: What is the directory path to the page?
+  name:
+    type: string
+    description: Page name
+    default: home
+    prompt: What is page name?
