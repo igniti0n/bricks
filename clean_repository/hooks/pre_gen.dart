@@ -80,7 +80,10 @@ void run(HookContext context) async {
         final parameterType = splitProperty[0];
         final parameterName = splitProperty[1];
 
-        parameters.add();
+        parameters.add({
+          'parameterName': parameterName,
+          'type': parameterType,
+        });
       }
     }
 
