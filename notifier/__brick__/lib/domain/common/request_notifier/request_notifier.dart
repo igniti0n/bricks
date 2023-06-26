@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:loggy/loggy.dart';
+import 'dart:developer';
 
 import 'request_state.dart';
 

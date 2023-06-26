@@ -1,4 +1,4 @@
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final {{name.camelCase()}}Provider = Provider<{{name.pascalCase()}}>((ref) {
   return {{name.pascalCase()}}Impl(
@@ -7,7 +7,9 @@ final {{name.camelCase()}}Provider = Provider<{{name.pascalCase()}}>((ref) {
 });
 
 abstract class {{name.pascalCase()}} { {{#methods}}
-  Future<{{type}}> {{methodName}}();
+  Future<{{type}}> {{methodName}}({{#parameters}}
+    {{type}} {{parameterName}},{{/parameters}}
+  );
   {{/methods}}
 }
 
