@@ -12,8 +12,8 @@ final {{name.camelCase()}}Provider = Provider<{{name.pascalCase()}}>((ref) {
 });
 
 abstract class {{name.pascalCase()}} { {{#methods}}
-  Future<{{type}}> {{methodName}}({{#parameters}}
-    {{type}} {{parameterName}},{{/parameters}}
+  Future<{{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}{{parameterName}}> {{methodName}}({{#parameters}}
+     {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}{{parameterName}} {{parameterName}},{{/parameters}}
   );
   {{/methods}}
 }
@@ -24,8 +24,8 @@ class {{name.pascalCase()}}Impl implements {{name.pascalCase()}} {
   {{/dependencies}}
   {{#methods}}
   @override
-  Future<{{type}}> {{methodName}}({{#parameters}}
-    {{type}} {{parameterName}},{{/parameters}}
+  Future<{{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}{{parameterName}}> {{methodName}}({{#parameters}}
+     {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{parameterName}},{{/parameters}}
   ) async {
     // TODO: - Implement method
   } {{/methods}}

@@ -80,19 +80,26 @@ void run(HookContext context) async {
         final parameterType = splitProperty[0];
         final parameterName = splitProperty[1];
 
+        final hasSpecial = parameterType.toLowerCase().contains('<') ||
+            parameterType.toLowerCase().contains('>');
+
         parameters.add({
           'parameterName': parameterName,
           'type': parameterType,
+          'hasSpecial': hasSpecial,
         });
       }
     }
 
     logger.alert('Added method! More methods? enter \'e\' to to finish');
+    final hasSpecial = propertyType.toLowerCase().contains('<') ||
+        propertyType.toLowerCase().contains('>');
 
     methods.add({
       'methodName': propertyName,
       'type': propertyType,
       'parameters': parameters,
+      'hasSpecial': hasSpecial,
     });
   }
   context.vars = {

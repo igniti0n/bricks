@@ -6,8 +6,10 @@ final {{name.camelCase()}}RepositoryProvider = Provider<{{name.pascalCase()}}Rep
   );
 });
 
-abstract class {{name.pascalCase()}}Repository { {{#methods}}
-  Future<{{type}}> {{methodName}}();
+abstract class {{name.pascalCase()}}Repository {  {{#methods}}
+  Future<{{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}{{parameterName}}> {{methodName}}({{#parameters}}
+     {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}{{parameterName}} {{parameterName}},{{/parameters}}
+  );
   {{/methods}}
 }
 
@@ -17,8 +19,8 @@ class {{name.pascalCase()}}RepositoryImpl implements {{name.pascalCase()}}Reposi
   {{/dependencies}}
   {{#methods}}
   @override
-  Future<{{type}}> {{methodName}}({{#parameters}}
-    {{type}} {{parameterName}},{{/parameters}}
+  Future<{{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}> {{methodName}}({{#parameters}}
+   {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{parameterName}},{{/parameters}}
   ) async {
     // TODO: - Implement method
   } {{/methods}}
