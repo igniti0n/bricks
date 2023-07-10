@@ -1,20 +1,20 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final {{name.camelCase()}}RepositoryProvider = Provider<{{name.pascalCase()}}Repository>((ref) {
-  return {{name.pascalCase()}}RepositoryImpl(
+final {{name.camelCase()}}Provider = Provider<{{name.pascalCase()}}>((ref) {
+  return {{name.pascalCase()}}Impl(
       {{#dependencies}}ref.read({{dependencyName.camelCase()}}Provider),{{/dependencies}}
   );
 });
 
-abstract class {{name.pascalCase()}}Repository {  {{#methods}}
+abstract class {{name.pascalCase()}} {  {{#methods}}
   Future<{{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}{{parameterName}}> {{methodName}}({{#parameters}}
      {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}{{parameterName}} {{parameterName}},{{/parameters}}
   );
   {{/methods}}
 }
 
-class {{name.pascalCase()}}RepositoryImpl implements {{name.pascalCase()}}Repository{
-  const {{name.pascalCase()}}RepositoryImpl({{#dependencies}}this.{{dependencyName.camelCase()}},{{/dependencies}});
+class {{name.pascalCase()}}Impl implements {{name.pascalCase()}}{
+  const {{name.pascalCase()}}Impl({{#dependencies}}this.{{dependencyName.camelCase()}},{{/dependencies}});
   {{#dependencies}}final {{dependencyName.pascalCase()}} {{dependencyName.camelCase()}};
   {{/dependencies}}
   {{#methods}}
