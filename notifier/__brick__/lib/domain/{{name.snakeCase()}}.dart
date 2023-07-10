@@ -1,5 +1,8 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
+{{#description}}
+/*
+{{description}}
+ */{{/description}}
 final {{name.camelCase()}}Provider = StateNotifierProvider<{{name.pascalCase()}}, {{data}}>(
   (ref) => {{name.pascalCase()}}(
      {{#dependencies}}ref.read({{dependencyName.camelCase()}}Provider),{{/dependencies}}

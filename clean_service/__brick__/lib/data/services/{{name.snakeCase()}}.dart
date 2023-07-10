@@ -1,10 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 {{#description}}
 /*
-{{description}}}
- */
-{{/description}}
+{{description}}
+ */{{/description}}
 final {{name.camelCase()}}Provider = Provider<{{name.pascalCase()}}>((ref) {
   return {{name.pascalCase()}}Impl(
       {{#dependencies}}ref.read({{dependencyName.camelCase()}}Provider),{{/dependencies}}

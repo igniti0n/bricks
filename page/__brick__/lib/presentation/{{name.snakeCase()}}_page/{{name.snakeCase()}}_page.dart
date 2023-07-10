@@ -3,7 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'components/{{name.snakeCase()}}_page_app_bar.dart';
 import 'components/{{name.snakeCase()}}_page_body.dart';
-
+{{#description}}
+/*
+{{description}}
+ */{{/description}}
 class {{name.pascalCase()}}Page extends ConsumerWidget {
   const {{name.pascalCase()}}Page({super.key});
 
