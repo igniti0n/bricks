@@ -1,13 +1,13 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final {{name.camelCase()}}Notifier = StateNotifierProvider<{{name.pascalCase()}}Notifier, {{data}}>(
-  (ref) => {{name.pascalCase()}}Notifier(
+final {{name.camelCase()}}Provider = StateNotifierProvider<{{name.pascalCase()}}, {{data}}>(
+  (ref) => {{name.pascalCase()}}(
      {{#dependencies}}ref.read({{dependencyName.camelCase()}}Provider),{{/dependencies}}
   ),
 );
 
-class {{name.pascalCase()}}Notifier extends RequestNotifier<void> {
-  {{name.pascalCase()}}Notifier({{#dependencies}}this.{{dependencyName.camelCase()}},{{/dependencies}});
+class {{name.pascalCase()}} extends RequestNotifier<void> {
+  {{name.pascalCase()}}({{#dependencies}}this.{{dependencyName.camelCase()}},{{/dependencies}});
   {{#dependencies}}final {{dependencyName.pascalCase()}} {{dependencyName.camelCase()}};
   {{/dependencies}}
   {{#methods}}
