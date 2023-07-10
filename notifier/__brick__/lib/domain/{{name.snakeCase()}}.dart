@@ -1,7 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final {{name.camelCase()}}Notifier = StateNotifierProvider<FetchTranslationsNotifier, {{data}}>(
-  (ref) => FetchTranslationsNotifier(
+final {{name.camelCase()}}Notifier = StateNotifierProvider<{{name.pascalCase()}}Notifier, {{data}}>(
+  (ref) => {{name.pascalCase()}}Notifier(
      {{#dependencies}}ref.read({{dependencyName.camelCase()}}Provider),{{/dependencies}}
   ),
 );
