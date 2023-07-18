@@ -9,7 +9,7 @@ final {{name.camelCase()}}Provider = StateNotifierProvider<{{name.pascalCase()}}
   ),
 );
 
-class {{name.pascalCase()}} extends StateNotifier<void> {
+class {{name.pascalCase()}} extends StateNotifier<{{outputValue}}> {
   {{name.pascalCase()}}({{#dependencies}}this.{{dependencyName.camelCase()}},{{/dependencies}}) : super(initial_value);
   {{#dependencies}}final {{dependencyName.pascalCase()}} {{dependencyName.camelCase()}};
   {{/dependencies}}
