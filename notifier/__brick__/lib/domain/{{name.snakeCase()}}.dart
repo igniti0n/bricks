@@ -19,5 +19,6 @@ class {{name.pascalCase()}} extends RequestNotifier<void> {
     {{type}} {{parameterName}},{{/parameters}}
   ) async {
     // TODO: - Implement method
+    throw UnimplementedError();
   } {{/methods}}
 }

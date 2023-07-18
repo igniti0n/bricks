@@ -26,5 +26,6 @@ class {{name.pascalCase()}}Impl implements {{name.pascalCase()}} {
      {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{parameterName}},{{/parameters}}
   ) async {
     // TODO: - Implement method
+    throw UnimplementedError();
   } {{/methods}}
 }
